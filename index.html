@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Weather App</title>
+
+    <link href="styles/style.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" rel="stylesheet">
+    <link href="https://erikflowers.github.io/weather-icons/css/weather-icons.min.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+
+        <!-- Wrapper around the whole site -->
+    <div class="wrapper d-flex align-items-center justify-content-center">
+
+      <!-- The box in which the content is shown -->
+      <div class="weather-box container">
+
+        <!-- Heading -->
+        <div class="row mt-4">
+          <div class="col-12 d-flex justify-content-center align-items-center">
+            <h1 class="heading">Local Weather</h1>
+          </div>
+        </div>
+
+        <!-- Shows the location -->
+        <div class="row mt-4">
+          <div class="col-12 d-flex justify-content-center align-items-center">
+            <p class="text-center" id="city">City, Country</p>
+          </div>
+        </div>
+
+        <!-- Main part with icon and temperature -->
+        <div class="row justify-content-center mt-5">
+          <div class="col-12 col-md-6 col-xl-5 main d-flex justify-content-center align-items-center">
+            <i id="weather-icon" class="wi wi-refresh"></i>
+          </div>
+          <div class="col-12 col-md-6 col-xl-5 main d-flex flex-column mt-4 mt-md-0">
+            <div class="d-flex align-items-center justify-content-center">
+              <p><span id="temperature">--</span> <span id="temp-unit" class="">°C</span></p>
+            </div>
+            <div class="d-flex align-items-center justify-content-center">
+              <p id="weather-description">Weather condition</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- appendix with wind and cloud information -->
+        <div class="row justify-content-center mt-5">
+          <div class="col-12 col-sm-6 col-xl-5 appendix d-flex justify-content-center">
+            <i class="wi wi-strong-wind"></i>
+            <p id="wind-speed">wind speed: -- km/h</p>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-5 appendix d-flex justify-content-center mt-xs">
+            <i class="wi wi-cloudy"></i>
+            <p id="cloudiness">cloudiness: -- %</p>
+          </div>
+        </div>
+
+        <!-- information about sunrise and sunset -->
+        <div class="row justify-content-center mt-5 mb-5">
+          <div class="col-12 col-sm-6 col-xl-5 sun-info d-flex align-items-center justify-content-center">
+            <i class="wi wi-sunrise"></i>
+            <p id="sunrise">sunrise: --:--</p>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-5 sun-info d-flex align-items-center justify-content-center mt-xs">
+            <i class="wi wi-sunset"></i>
+            <p id="sunset">sunset: --:--</p>
+          </div>
+        </div>
+
+        <!-- Button that appears when information about last visit is available. When clicked it opens the next div -->
+        <div class="row justify-content-center mb-4" id='divBtnIdb'>
+          <div class="col-4 d-flex justify-content-center">
+            <button class="btn" id='btnIdb'>Last Visits</button>
+          </div>
+        </div>
+
+        <!-- This div is shown when the button is clicked. It shows data from the last visit stored in the IDB -->
+        <div id='divContentIdb'>
+          <div class="row justify-content-center mb-4">
+            <div class="col-2 d-flex justify-content-start align-items-center">
+              <button class="btn" id="lastIdb">Previous</button>
+            </div>
+            <div class='col-8 d-flex justify-content-center'>
+              <p>You visited on <span id='dateIdb'></span> from <span id='cityIdb'></span>.</p>
+            </div>
+            <div class="col-2 d-flex justify-content-end align-items-center">
+              <button class="btn" id='nextIdb'>Next</button>
+            </div>
+          </div>
+          <div class="row justify-content-center mb-3">
+            <div class="col-12 col-sm-6 col-xl-5 sun-info d-flex align-items-center justify-content-center">
+              <i class="wi wi-sunrise"></i>
+              <p id="sunriseIdb">sunrise: --:--</p>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-5 sun-info d-flex align-items-center justify-content-center mt-xs">
+              <i class="wi wi-sunset"></i>
+              <p id="sunsetIdb">sunset: --:--</p>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- closes weather-box -->
+    </div> <!-- closes wrapper -->
+
+    <!-- Bootstrap 4 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+    <script src="scripts/main.js"></script>
+
+  </body>
+</html>

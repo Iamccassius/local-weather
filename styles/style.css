@@ -1,0 +1,218 @@
+.testred {
+  border: 5px solid red;
+}
+
+.testblue {
+  border: 5px solid blue;
+}
+
+.testgreen {
+  border: 5px solid green;
+}
+
+.testblack {
+  border: 5px solid black;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+p, h1, h2, h3, h4 {
+  padding: 0;
+  margin: 0;
+}
+
+#weather-icon {
+  font-size: 10rem;
+  color: black;
+}
+
+i {
+  font-size: 3rem;
+  color: black;
+  margin: 0 1rem 0 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+  min-width: 360px;
+  min-height: 360px;
+}
+
+.weather-box {
+  border-radius: 2rem;
+  width: 60%;
+  padding: 0;
+  margin: auto;
+  box-sizing: border-box;
+  background: rgba(111, 183, 233, 0.5);
+  background: linear-gradient(to bottom, rgba(86, 204, 242, 1), rgba(47, 128, 237, 0.9));
+
+}
+
+.row {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.col {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.heading {
+  font-size: 4rem;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.main {
+  padding: 0;
+}
+
+.main div {
+  height: 50%;
+  width: 100%;
+}
+
+.main div p {
+  font-size: 3rem;
+}
+
+.temp-unit-active {
+  color: #007BFF;
+}
+
+.temp-unit-active:hover {
+  color: #0060c6;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#city {
+  font-size: 3rem;
+}
+
+#divBtnIdb {
+  display: none;
+}
+
+#btnIdb {
+  border-radius: 50px;
+  color: #030303;
+  font-size: 20px;
+  background: #25b5d9;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+#btnIdb:hover {
+  background: #345ad9;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#divContentIdb {
+  display: none;
+}
+
+#lastIdb, #nextIdb {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  color: black;
+  font-size: 1.5rem;
+  background: #25b5d9;
+  padding: 10px 20px 10px 20px;
+  width: 6rem;
+  text-decoration: none;
+}
+
+#lastIdb:hover, #nextIdb:hover {
+  background-color: #345ad9;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Rules that only apply at certain viewports */
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575px) {
+  html {
+    font-size: 10px;
+  }
+
+  .weather-box {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .mt-xs {
+    margin-top: 1.5rem;
+  }
+
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  html {
+    font-size: 10px;
+  }
+
+  .weather-box {
+    width: 85%;
+  }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+   html {
+    font-size: 12px;
+  }
+
+  .weather-box {
+    width: 75%;
+  }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+   html {
+    font-size: 14px;
+  }
+
+  .weather-box {
+    width: 65%;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  html {
+    font-size: 14px;
+  }
+
+  .weather-box {
+    width: 60%;
+  }
+
+}
