@@ -311,7 +311,11 @@ function timeFromUnix(unix) {
   dateObject.date = myDate.getDate();
   dateObject.day = myDate.getDay();
   dateObject.hours = myDate.getHours();
-  dateObject.minutes = myDate.getMinutes();
+  if(myDate.getMinutes() >= 10) {
+    dateObject.minutes = myDate.getMinutes();
+  } else {
+    dateObject.minutes = '0' + myDate.getMinutes();
+  }
   if ((-1 * (myDate.getTimezoneOffset() / 60)) >= 0) {
     dateObject.timezoneOffset = '+' + (-1 * (myDate.getTimezoneOffset() / 60));
   } else {
